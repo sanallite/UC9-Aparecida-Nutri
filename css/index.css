@@ -133,27 +133,53 @@ button[disabled=disabled], button:disabled {
 	border: 1px solid red;
 }
 
-.form h2 {
-	margin-top: revert;
+section.form h2 {
+	margin-top: 0.1em;
 }
 
-.form label {
+form label {
 	font-size: 1.5em;
-	width: 25%;
-	float: left;
 }
 
-.form input:not(input[type="submit"]) {
-	width: 75%;
+form input:not(input[type="submit"]) {
+	width: 95%;
 	padding: 0.5em;
 	margin-bottom: 1em;
-	float: left;
 }
 
-.form input[type="submit"] {
+form input#gordura {
+	width: 31.6%;
+}
+
+form input[type="submit"] {
 	padding: 0.5em;
-	background-color: rgb(0, 122, 163);
+	background-color: rgb(37, 68, 203);
 	color: white;
 	border-style: none;
+	border-radius: 0.3em;
 	font-size: 1.3em;
+	width: 30%;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 3fr 3fr 3fr;
+	grid-template-rows: 10vh 10vh;
+	grid-template-areas: "n p a" "g g g";
+}
+
+p.input_nome {
+	grid-area: n;
+}
+
+p.input_peso {
+	grid-area: p;
+}
+
+p.input_altura {
+	grid-area: a;
+}
+
+p.input_gordura {
+	grid-area: g;
 }
