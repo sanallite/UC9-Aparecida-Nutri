@@ -183,3 +183,20 @@ p.input_altura {
 p.input_gordura {
 	grid-area: g;
 }
+
+.campo-invalido {
+	border: 1px solid red;
+}
+
+.paciente-invalido {
+	background-color: lightcoral;
+}
+
+#mensagem-erro {
+	color: red;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
