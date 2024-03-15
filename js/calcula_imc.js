@@ -37,7 +37,10 @@ let paciente = document.querySelector("#primeiro-paciente");
 // Selecionando o elemento com id.
 
 let pacientes = document.querySelectorAll(".paciente");
+// Selecionando todos os eventos com a classe.
+
 // console.log(pacientes);
+
 for (let i = 0; i < pacientes.length; i++) {
 	const paciente = pacientes[i];
 	
@@ -48,19 +51,20 @@ for (let i = 0; i < pacientes.length; i++) {
 	let altura = td_altura.textContent
 
 	let td_gordura = paciente.querySelector(".info-gordura");
+	// Não utilizado no momento.
 
 	let td_imc = paciente.querySelector(".info-imc");
 	// Selecionando os elementos filhos através de suas classes, utilizando o nome da variável.
 
 	let alturaValida = validaAltura(altura);
 	let pesoValido = validaPeso(peso);
-	// Definindo que os valores são o conteúdo daqueles elementos armazenados.
+	// Definindo uma variável que chama uma função, utilizando como parâmetro os valores que estão dentro de cada coluna.
 
 	if ( !pesoValido && !alturaValida ) {
 		td_imc.textContent = "Peso e altura inválidos!";
 		paciente.classList.add("paciente-invalido");
 	}
-
+	
 	else if (!pesoValido) {
 		td_imc.textContent = "Peso inválido!";
 		paciente.classList.add("paciente-invalido");
@@ -73,18 +77,15 @@ for (let i = 0; i < pacientes.length; i++) {
 
 	if (pesoValido && alturaValida) {		
 		var imc = calculaIMC(peso,altura);
-		td_imc.textContent = imc; 
-		//var imc = peso / Math.pow(altura, 2); =>outra maneira de calcular o IMC.
+		td_imc.textContent = imc;
 	}
+	// Dependendo do resultado da verificação, o conteúdo da coluna, ou elemento td, será alterado e terá sua classe alterada, para o estilo do elemento mude.
 
 	// let altura_quadrado = altura*altura;
 	// let imc = peso/altura_quadrado;
 	// let imc = peso / ( altura*altura );
 	// let imc = calculaIMC(peso, altura);
-	// Fazendo o cálculo.
-
-	// td_imc.textContent = imc;
-	// Definindo o valor para aquele elemento, e adicionando duas casas decimais para exibição.
+	// Formas de fazer o cálculo.
 }
 
 function calculaIMC(peso, altura) {

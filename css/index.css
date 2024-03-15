@@ -194,9 +194,30 @@ p.input_gordura {
 
 #mensagem-erro {
 	color: red;
+	margin: revert;
 }
 
 .fadeOut {
 	opacity: 0;
 	transition: 0.5s;
+}
+
+#filtra-tabela {
+	width: 200px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.invisivel {
+	display: none;
+}
+
+section.container label {
+	font-size: 1.5em;
+}
+
+section.container input {
+	width: 31.6%;
+	padding: 0.5em;
+	margin-bottom: 1em;
 }
