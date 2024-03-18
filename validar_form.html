@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        .erros {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" id="tarefas">
+        <fieldset>
+            <legend>Nova Tarefa</legend>
+
+            <p class="texto">
+                <label for="responsavel">Responsável:</label>
+                <select name="responsavel" id="responsavel">
+                    <option value="">Selecione</option>
+                    <option value="Márcio">Márcio</option>
+                    <option value="Teodoro">Teodoro</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </p>
+
+            <p class="texto">
+                <label for="nome">Tarefa:</label>
+                <input type="text" id="nome">
+            </p>
+
+            <p class="texto">
+                <label for="desc">Descrição:</label>
+                <textarea id="desc"></textarea>
+            </p>
+
+            <p class="texto">
+                <label for="prazo">Prazo:</label>
+                <input type="text" id="prazo">
+            </p>
+
+            <fieldset>
+                <legend>Prioridade:</legend>
+
+                <p>
+                    <input type="radio" name="prioridade" id="pri1" value="Baixa" checked>
+                    <label for="pri1">Baixa</label>
+
+                    <input type="radio" name="prioridade" id="pri2" value="Média">
+                    <label for="pri2">Média</label>
+
+                    <input type="radio" name="prioridade" id="pri3" value="Alta">
+                    <label for="pri3">Alta</label>
+                </p>
+
+                <p>
+                    <label for="concluida">Concluida?</label>
+                    <input type="checkbox" id="concluida" value="Sim">
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="Criar" id="criar_tarefa">
+            </p>
+        </fieldset>
+
+        <fieldset class="erros" id="mensagens">
+        </fieldset>
+    </form>
+
+    <script src="js/validar_form.js"></script>
+</body>
+</html>
