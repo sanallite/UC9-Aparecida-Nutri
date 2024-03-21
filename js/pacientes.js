@@ -15,11 +15,15 @@ const CriarNovaLinha = (nome, peso, altura, porcentagem_gordura, imc) => {
 
 const tabela = document.querySelector("#tabela-pacientes");
 
-const http = new XMLHttpRequest()
+const listaPacientes = () => {
+    return fetch('http://localhost:3000/pacientes').then( resposta => {
+        return resposta.json();
+    } );
+}
 
-http.open('GET', 'http://localhost:3000/profile')
+const http = new XMLHttpRequest();
 
-http.send()
+http.open('GET', 'http://localhost:3000/pacientes');
 
 http.onload = () => {
     const data = JSON.parse(http.response);
@@ -29,3 +33,5 @@ http.onload = () => {
         tabela.appendChild(CriarNovaLinha(element.nome, element.peso, element.altura, element.porcentagem_gordura, element.imc));
     });
 }
+
+http.send();

@@ -1,6 +1,6 @@
-var tabela = document.querySelector("#tabela-pacientes");
+var tabela1 = document.querySelector("#tabela-pacientes");
 
-tabela.addEventListener("dblclick",
+tabela1.addEventListener("dblclick",
     function(event) {
         /* var alvoElemento = event.target; // td
         var paiElemento = alvoElemento.parentNode; // tr
