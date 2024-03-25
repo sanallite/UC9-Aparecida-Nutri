@@ -5,44 +5,96 @@
       "peso": "100",
       "altura": "4.00",
       "porcentagem_gordura": "10",
-      "id": 1,
+      "id": "1",
       "imc": ""
     },
-
     {
       "nome": "Joâo",
       "peso": "0",
       "altura": "1.72",
       "porcentagem_gordura": "40",
-      "id": 2,
+      "id": "2",
       "imc": ""
     },
-
     {
       "nome": "Erika",
       "peso": "0",
       "altura": "0",
       "porcentagem_gordura": "14",
-      "id": 3,
+      "id": "3",
       "imc": ""
     },
-
     {
       "nome": "Douglas",
       "peso": "85",
       "altura": "1.73",
       "porcentagem_gordura": "24",
-      "id": 4,
+      "id": "4",
       "imc": ""
     },
-
     {
       "nome": "Tatiana",
       "peso": "46",
       "altura": "1.55",
       "porcentagem_gordura": "19",
-      "id": 5,
+      "id": "5",
       "imc": ""
+    },
+    {
+      "id": "1756",
+      "nome": "Márcio",
+      "peso": "53",
+      "altura": "1.75",
+      "porcentagem_gordura": "10",
+      "imc": "17.31"
+    },
+    {
+      "id": "01dc",
+      "nome": "Aliffer",
+      "peso": "91",
+      "altura": "1.77",
+      "porcentagem_gordura": "20",
+      "imc": "29.05"
+    },
+    {
+      "id": "a426",
+      "nome": "aad",
+      "peso": "1",
+      "altura": "1",
+      "porcentagem_gordura": "1",
+      "imc": "1.00"
+    },
+    {
+      "id": "fc85",
+      "nome": "1",
+      "peso": "0",
+      "altura": "0",
+      "porcentagem_gordura": "0",
+      "imc": "NaN"
+    },
+    {
+      "id": "4fea",
+      "nome": "1",
+      "peso": "1",
+      "altura": "0",
+      "porcentagem_gordura": "0",
+      "imc": "Infinity"
+    },
+    {
+      "id": "7d72",
+      "nome": "a",
+      "peso": "0",
+      "altura": "1.90",
+      "porcentagem_gordura": "a",
+      "imc": "0.00"
+    },
+    {
+      "id": "7ef9",
+      "nome": "A",
+      "peso": "10",
+      "altura": "1.00",
+      "porcentagem_gordura": "-1",
+      "imc": "10.00"
     }
   ]
 }

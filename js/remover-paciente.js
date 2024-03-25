@@ -12,3 +12,9 @@ tabela1.addEventListener("dblclick",
         }, 500);
     }
 );
+
+const removerPaciente = () => {
+    return fetch("http://localhost:3000/pacientes/${id}", {
+        method: 'DELETE'
+    })
+}

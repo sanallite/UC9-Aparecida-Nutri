@@ -29,6 +29,8 @@ botaoAdicionar.addEventListener("click", (event) => {
 	console.log("Nome:", nome,"\nPeso:", peso+"kg", "\nAltura:", altura+"m", "\nPorcentagem de gordura corporal:", gordura+"%");
 	// Modo anterior: Fazendo a exibição no console ficar do jeito que quero.
 
+	cadastraPaciente(paciente);
+
 	form.reset();
 	//Restaurando o formulário para seu estado padrão, para que os campos não fiquem preenchidos após o paciente ser adicionado.
 
@@ -134,4 +136,22 @@ function adicionaPacienteTabela(paciente) {
 	var tabela_pacientes = document.querySelector("#tabela-pacientes");
 	tabela_pacientes.appendChild(paciente_tr);
 	// Selecionando um elemento tbody pelo seu id e acresentando o elemento tr como filho e por consquência os td como netos.
+}
+
+const cadastraPaciente = (paciente) => {
+    return fetch('http://localhost:3000/pacientes', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nome: paciente.nome,
+            peso: paciente.peso,
+            altura: paciente.altura,
+            porcentagem_gordura: paciente.gordura,
+            imc: paciente.imc
+        })
+    }).then( resposta => {
+            return resposta.body
+        } )
 }

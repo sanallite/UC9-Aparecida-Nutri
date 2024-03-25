@@ -51,7 +51,7 @@ for (let i = 0; i < pacientes.length; i++) {
 	let altura = td_altura.textContent
 
 	let td_gordura = paciente.querySelector(".info-gordura");
-	// Não utilizado no momento.
+	let porcentagem = td_gordura.textContent
 
 	let td_imc = paciente.querySelector(".info-imc");
 	// Selecionando os elementos filhos através de suas classes, utilizando o nome da variável.
@@ -79,6 +79,7 @@ for (let i = 0; i < pacientes.length; i++) {
 		var imc = calculaIMC(peso,altura);
 		td_imc.textContent = imc;
 	}
+
 	// Dependendo do resultado da verificação, o conteúdo da coluna, ou elemento td, será alterado e terá sua classe alterada, para o estilo do elemento mude.
 
 	// let altura_quadrado = altura*altura;
@@ -107,6 +108,16 @@ function validaAltura(altura) {
 	if (altura > 0 && altura <= 3.00) {
 		return true;
 	}
+	else {
+		return false;
+	}
+}
+
+function validaGordura(porcentagem) {
+	if (porcentagem > 0 && porcentagem <= 100) {
+		return true;
+	}
+
 	else {
 		return false;
 	}
