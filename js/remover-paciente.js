@@ -6,15 +6,21 @@ tabela1.addEventListener("dblclick",
         var paiElemento = alvoElemento.parentNode; // tr
         paiElemento.remove(); */
 
+        const linhaPaciente = event.target.closest("[data-id]");
+        // Pega o elemento pai, no caso o tr pelo mais próximo que tenha o atributo data-id, ou seja a linha que vai ser apagada vai ser a que tem a coluna que foi alvo do clique duplo.
+        let id = linhaPaciente.dataset.id;
+
         event.target.parentNode.classList.add("fadeOut");
         setTimeout( () => {
             event.target.parentNode.remove();
+            removerPaciente(id);
         }, 500);
     }
+    // Depois do time out de 0.5 segundos o elemento alvo será removido da tabela, e o item do banco que tem o mesmo id que está atribuido ao elemento pai será removido.
 );
 
-const removerPaciente = () => {
-    return fetch("http://localhost:3000/pacientes/${id}", {
+const removerPaciente = (id) => {
+    return fetch(`http://localhost:3000/pacientes/${id}`, {
         method: 'DELETE'
     })
 }
