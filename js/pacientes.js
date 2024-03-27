@@ -1,24 +1,27 @@
-const listaPacientes = () => {
-    return fetch('http://localhost:3000/pacientes').then( resposta => {
-        return resposta.json();
-    } );
-}
+import { pacienteService } from "./service.js";
+import { validacao } from "./service.js";
 
 const CriarNovaLinha = (nome, peso, altura, porcentagem_gordura, imc, id) => {
     const NovaLinha = document.createElement("tr");
     NovaLinha.classList.add("paciente");
 
-    const valor_imc = calculaIMC(peso, altura);
+    const valor_imc = validacao.calculaIMC(peso, altura);
 
-    const pesoValido = validaPeso(peso);
-    const alturaValida = validaAltura(altura);
-    const porcentagemValida = validaGordura(porcentagem_gordura);
+    const pesoValido = validacao.validaPeso(peso);
+    const alturaValida = validacao.validaAltura(altura);
+    const porcentagemValida = validacao.validaGordura(porcentagem_gordura);
 
     var td_imc = document.createElement("td");
     td_imc.classList.add("info-imc");
 
     var td_gordura = document.createElement("td");
     td_gordura.classList.add("info-gordura");
+
+    var acoes = `<a href="editar.html?id=${id}" class="editar_paciente">Editar</a>
+        <a href="" class="excluir_paciente">Excluir</a>`;
+
+    var td_acoes = document.createElement("td");
+    td_acoes.innerHTML = acoes;
 
     if ( !pesoValido && !alturaValida ) {
 		td_imc.textContent = "Peso e altura inválidos!";
@@ -56,6 +59,7 @@ const CriarNovaLinha = (nome, peso, altura, porcentagem_gordura, imc, id) => {
     NovaLinha.innerHTML = conteudo;
     NovaLinha.appendChild(td_gordura);
     NovaLinha.appendChild(td_imc);
+    NovaLinha.appendChild(td_acoes);
     NovaLinha.dataset.id = id;
 
     return NovaLinha;
@@ -63,7 +67,7 @@ const CriarNovaLinha = (nome, peso, altura, porcentagem_gordura, imc, id) => {
 
 const tabela = document.querySelector("#tabela-pacientes")
 
-listaPacientes().then ( promise => {
+pacienteService.listaPacientes().then ( promise => {
     promise.forEach( element => {
         tabela.appendChild(CriarNovaLinha(element.nome, element.peso, element.altura, element.porcentagem_gordura, element.imc, element.id));
     });

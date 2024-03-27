@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparecida Nutricionista</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+<body>
+    <header>
+        <div class="container">
+            <a href="index_json.html">
+                <h1 class="titulo">Aparecida Nutrição</h1>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="form">
+            <h2>Altere as informações de um paciente.</h2>
+
+            <form action="" id="editar">
+                <p class="input_nome">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" data-nome>
+                </p>
+                
+                <p class="input_peso">
+                    <label for="peso">Peso:</label>
+                    <input type="text" name="peso" id="peso" data-peso>
+                </p>
+                
+                <p class="input_altura">
+                    <label for="altura">Altura:</label>
+                    <input type="text" name="altura" id="altura" data-altura>
+                </p>
+                
+                <p class="input_gordura">
+                    <label for="gordura">Porcentagem de gordura:</label>
+                    <input type="text" name="gordura" id="gordura" data-gordura>
+                </p>
+
+                <input type="submit" value="Atualizar" id="editar-paciente">
+            </form>
+        </section>
+    </main>
+
+    <script src="js/editar_paciente.js" type="module"></script>
+</body>
+</html>

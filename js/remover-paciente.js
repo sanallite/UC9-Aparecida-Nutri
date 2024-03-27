@@ -1,3 +1,5 @@
+import { pacienteService } from "./service.js";
+
 var tabela1 = document.querySelector("#tabela-pacientes");
 
 tabela1.addEventListener("dblclick",
@@ -13,14 +15,8 @@ tabela1.addEventListener("dblclick",
         event.target.parentNode.classList.add("fadeOut");
         setTimeout( () => {
             event.target.parentNode.remove();
-            removerPaciente(id);
+            pacienteService.removerPaciente(id);
         }, 500);
     }
     // Depois do time out de 0.5 segundos o elemento alvo será removido da tabela, e o item do banco que tem o mesmo id que está atribuido ao elemento pai será removido.
 );
-
-const removerPaciente = (id) => {
-    return fetch(`http://localhost:3000/pacientes/${id}`, {
-        method: 'DELETE'
-    })
-}

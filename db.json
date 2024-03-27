@@ -41,12 +41,20 @@
       "imc": ""
     },
     {
-      "id": "1756",
       "nome": "Márcio",
       "peso": "53",
       "altura": "1.75",
-      "porcentagem_gordura": "10",
-      "imc": "17.31"
+      "porcentagem_gordura": "5",
+      "imc": "17.31",
+      "id": "1756"
+    },
+    {
+      "nome": "Tai",
+      "peso": "56",
+      "altura": "1.68",
+      "porcentagem_gordura": "20",
+      "imc": "10.00",
+      "id": "57b4"
     }
   ]
 }
