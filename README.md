@@ -11,3 +11,5 @@ Acessar o arquivo index pelo browser sync:
 ```browser-sync start --server --file . --host --port 5000 --startPath index_json.html```
 
 Os arquivos não utilizados são de uma versão anterior, onde os pacientes foram inseridos no próprio html e apenas inseridos na tabela e os arquivos valida form são de outra atividade.
+
+Nesse projeto aprendi bastante sobre selecionar elementos do html e usar funções no JS, além de manipular um banco de dados JSON, com a principal referência sendo o outro projeto no repositório "js_assincrono_crud".
