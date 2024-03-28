@@ -17,11 +17,13 @@ const CriarNovaLinha = (nome, peso, altura, porcentagem_gordura, imc, id) => {
     var td_gordura = document.createElement("td");
     td_gordura.classList.add("info-gordura");
 
-    var acoes = `<a href="editar.html?id=${id}" class="editar_paciente">Editar</a>
-        <a href="" class="excluir_paciente">Excluir</a>`;
+    var acoes = `<a href="editar.html?id=${id}" class="editar_paciente">
+    <img src="css/pencil-fill.svg"></a>
+        <a href="" class="excluir_paciente"><img class="excluir_paciente" src="css/trash-fill.svg"></a>`;
 
     var td_acoes = document.createElement("td");
     td_acoes.innerHTML = acoes;
+    td_acoes.dataset.coluna = "acoes";
 
     if ( !pesoValido && !alturaValida ) {
 		td_imc.textContent = "Peso e altura inválidos!";

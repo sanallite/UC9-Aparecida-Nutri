@@ -55,6 +55,11 @@ section h2{
 	margin-bottom: .5em;
 }
 
+section h3 {
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
 table{
 	width: 100%;
 	margin-bottom : .5em;
@@ -224,4 +229,8 @@ section.container input {
 	width: 31.6%;
 	padding: 0.5em;
 	margin-bottom: 1em;
+}
+
+tbody .editar_paciente {
+	padding-right: 1em;
 }
