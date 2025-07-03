@@ -12,11 +12,14 @@ Nesse projeto aprendi mais sobre selecionar elementos do HTML e usar funções n
 
 ## Executando o Projeto
 * Instale se for necessário o Node.js
-* Instale os pacotes ``json-server`` e ``browser-sync``
-* Na pasta raiz, execute o comando para acessar o arquivo JSON e usá-lo como um servidor local:
+* Na pasta raiz do projeto, através no npm instale os pacotes ``json-server`` e ``browser-sync``
 
-      json-server --watch db.json
+      npm install browser-sync json-server
+
+* Execute o comando para acessar o arquivo JSON e usá-lo como um servidor local:
+
+      npx json-server --watch db.json
 
 * Acesse o arquivo index pelo browser sync:
 
-      browser-sync start --server --file . --host --port 5000 --startPath index_json.html
+      npx browser-sync start --server --file . --host --port 5000 --startPath index_json.html
